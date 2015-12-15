@@ -309,8 +309,7 @@ $ git config --list
             <div class = "fragment">
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
-  change hello_world.txt
-  git checkout hello_world.txt
+  $ git checkout hello_world.txt
               </code></pre>
             </div>
             <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
@@ -321,9 +320,9 @@ $ git config --list
             <div class = "fragment">
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git reset HEAD hello_world.txt
-git checkout hello_world.txt
+$ git add hello_world.txt
+$ git reset HEAD hello_world.txt
+$ git checkout hello_world.txt
               </code></pre>
             </div>
             <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
@@ -334,10 +333,10 @@ git checkout hello_world.txt
             <div class = "fragment">
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -am "Changing and committing some lines"
-git log --pretty=oneline
-git revert [HASH]
+$ git add hello_world.txt
+$ git commit -am "Changing and committing some lines"
+$ git log --pretty=oneline
+$ git revert [HASH]
               </code></pre>
             </div>
             <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
@@ -347,8 +346,8 @@ git revert [HASH]
             <h4>Remove a file from staging</h4>
             <p>Create new file my_new_file.txt</p>
               <pre><code contenteditable class ="command-line">
-git add my_new_file.txt
-git reset my_new_file.txt
+$ git add my_new_file.txt
+$ git reset my_new_file.txt
               </code></pre>
           </section>
           <section>
