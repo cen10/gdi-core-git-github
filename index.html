@@ -385,12 +385,11 @@ $ git reset my_new_file.txt
             <h4>Delete a file</h4>
             <p>Create new file my_other_file.txt</p>
             <pre><code contenteditable class ="command-line">
-
-git add my_other_file.txt
+$ git add my_other_file.txt
             </code></pre>
             <p>Manually delete your file</p>
             <pre><code contenteditable class ="command-line">
-git rm my_other_file.txt
+$ git rm my_other_file.txt
             </code></pre>
           </section>
         </section>
@@ -408,12 +407,12 @@ git rm my_other_file.txt
             <h3>Branching</h3>
             <p>Create a new branch called version2</p>
             <pre><code contenteditable class ="command-line">
-git checkout -b version2
+$ git checkout -b version2
             </code></pre>
             <p>Add new lines to hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -m "Adding changes to version 2"
+$ git add hello_world.txt
+$ git commit -m "Adding changes to version 2"
             </code></pre>
           </section>
           <section>
@@ -421,15 +420,15 @@ git commit -m "Adding changes to version 2"
             <h4>Switching branches</h4>
             <p>See all branches. Branch with * is active</p>
             <pre><code contenteditable class ="command-line">
-git branch
+$ git branch
             </code></pre>
             <p>Switch to master and look at hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
-git checkout master
+$ git checkout master
             </code></pre>
             <p>Switch to version2 and look at hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
-git checkout version2
+$ git checkout version2
             </code></pre>
           </section>
         </section>
@@ -440,8 +439,8 @@ git checkout version2
             <h4>Merge to get changes from one branch into another*</h4>
             <p>Switch to master and merge changes</p>
             <pre><code contenteditable class ="command-line">
-git checkout master
-git merge version2
+$ git checkout master
+$ git merge version2
             </code></pre>
             <p>*rebase is another option, but will not be covered in this workshop</p>
           </section>
@@ -450,15 +449,15 @@ git merge version2
             <h4>Merge conflicts</h4>
             <p>Change first line in hello_world.txt in master branch</p>
             <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -m "Changing first line in master"
+$ git add hello_world.txt
+$ git commit -m "Changing first line in master"
             </code></pre>
             <p>Change first line in hello_world.txt in version2 branch</p>
             <pre><code contenteditable class ="command-line">
-git checkout version2
+$ git checkout version2
 # open hello_world.txt and change first line
-git add hello_world.txt
-git commit -m "Changing first line in version2"
+$ git add hello_world.txt
+$ git commit -m "Changing first line in version2"
             </code></pre>
           </section>
           <section>
@@ -466,7 +465,7 @@ git commit -m "Changing first line in version2"
             <h4>Merge conflicts, cont.</h4>
             <p>Merge from master into version2</p>
             <pre><code contenteditable class ="command-line">
-git merge master
+$ git merge master
             </code></pre>
             <p class ="fragment">You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
 
@@ -512,9 +511,9 @@ git merge master
 cd ../ # Back in root directory
 mkdir hello-github
 cd hello-github
-git init
-git remote add origin git@github.com:username/NAME-OF-REPO
-git pull origin master
+$ git init
+$ git remote add origin git@github.com:username/NAME-OF-REPO
+$ git pull origin master
             </code></pre>
           </section>
           <section>
@@ -522,9 +521,9 @@ git pull origin master
             <h4>Push to GitHub Repo</h4>
             <p>Edit the ReadMe file
             <pre><code contenteditable class ="command-line">
-git add README
-git commit -m "Updating readme file"
-git push origin master
+$ git add README
+$ git commit -m "Updating readme file"
+$ git push origin master
             </code></pre>
             <p class ="fragment">Go look at your github repo online</p>
           </section>
@@ -534,13 +533,13 @@ git push origin master
             <p>If you are working with a team, you want to make sure that you have everyone's changes before pushing your changes to the GitHub repo</p>
             <pre><code contenteditable class ="command-line">
 # Commit local changes
-git commit -m "My latest commit"
+$ git commit -m "My latest commit"
 # Pull changes other people have made
-git pull origin master
+$ git pull origin master
 # Fix any conflicts (see merge conflicts above) and commit
-git commit -m "Fixing merging conflicts"
+$ git commit -m "Fixing merging conflicts"
 # push local changes to GitHub
-git push origin master
+$ git push origin master
             </code></pre>
           </section>
         </section>
@@ -564,14 +563,14 @@ git push origin master
             <pre><code contenteditable class ="command-line">
 cd ../
 
-git clone https://github.com/username/FORKED-REPO-NAME.git
+$ git clone https://github.com/username/FORKED-REPO-NAME.git
 
 cd FORKED-REPO-NAME
 
-git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
+$ git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
 # Assigns the original repository to a remote called "upstream"
 
-git fetch upstream
+$ git fetch upstream
 # Pulls in changes not present in your local repository, without modifying your files
             </code></pre>
           </section>
