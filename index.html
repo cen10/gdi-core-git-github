@@ -336,15 +336,37 @@ $ git checkout hello_world.txt
             <h3>Nobody's Perfect</h3>
             <h4>Undoing committed changes</h4>
             <div class = "fragment">
-              <p>Open hello_world.txt and add some new text</p>
+              <p style="font-size:28px;">Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
 $ git add hello_world.txt
-$ git commit -am "Changing and committing some lines"
+$ git commit -m "Changing and committing some lines"
 $ git log --pretty=oneline
-$ git revert [HASH]
+              </code></pre>
+              <img src="images/pretty-one-line.png"/>
+              <p style="font-size:28px;">The long series of numbers and letters is a hash (also called a SHA) that uniquely identifies the changes contained in this commit. Copy it to your clipboard.</p>
+              <pre><code contenteditable class="command-line">
+$ git revert [hash]
+# Paste the hash after 'git revert' - don't put the brackets [ ] around it
               </code></pre>
             </div>
-            <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
+          </section>
+          <section>
+            <h3>Nobody's Perfect</h3>
+            <h4>Undoing committed changes</h4>
+            <p style="font-size:28px;">Running the revert command may cause your terminal screen to look like this:</p>
+            <img src="images/revert-screen.png"/>
+            <p style="font-size:28px;">When you revert the changes from a previous commit, you mark this revert with a new commit. This screen shows us that the new commit's message will be "Revert 'Changing and committing a line of text.'" You do not have to enter any additional information. In order to save this commit and leave this screen, do the following:</p>
+          </section>
+          <section>
+            <h3>Nobody's Perfect</h3>
+            <h4>Undoing committed changes</h4>
+            <ul>
+              <li style="font-size:28px;">Type a colon - press "Shift" + ";" - you will see a colon appear at the bottom left-hand corner of the terminal screen.</li>
+              <li style="font-size:28px;">Type "wq", which stands for "write quit". This will 'write' your commit and 'quit' from this internal terminal text editor</li>
+              <li style="font-size:28px;">Press enter. You'll be brought back to your normal command line within your repo.</li>
+              <li style="font-size:28px;">Type "git log" and you'll see that your log has a third commit that indicates you reverted.</li>
+              <li style="font-size:28px;">Look at your "hello_world" file - your second changes are gone!</li>
+            </ul>
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
