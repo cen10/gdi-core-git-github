@@ -307,7 +307,7 @@ $ git config --list
             <h4>Undoing local changes</h4>
             <p>If you haven't committed yet</p>
             <div class = "fragment">
-              <p>Open hello_world.txt and add some new text</p>
+              <p>Open hello_world.txt, add some new text, and save. Then:</p>
               <pre><code contenteditable class ="command-line">
   $ git checkout hello_world.txt
               </code></pre>
@@ -318,11 +318,16 @@ $ git config --list
             <h3>Nobody's Perfect</h3>
             <h4>Undoing staged changes</h4>
             <div class = "fragment">
-              <p>Open hello_world.txt and add some new text</p>
+              <p>Open hello_world.txt, add some new text, and save. Then:</p>
               <pre><code contenteditable class ="command-line">
 $ git add hello_world.txt
+$ git status
+# File is now staged.
 $ git reset HEAD hello_world.txt
+$ git status
+# File is now unstaged, changes still exist.
 $ git checkout hello_world.txt
+# Changes are now gone from file.
               </code></pre>
             </div>
             <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
