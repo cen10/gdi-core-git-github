@@ -373,15 +373,19 @@ $ git revert [hash]
             <h4>Remove a file from staging</h4>
             <p>Create new file my_new_file.txt</p>
               <pre><code contenteditable class ="command-line">
+$ touch my_new_file.txt
 $ git add my_new_file.txt
 $ git reset my_new_file.txt
               </code></pre>
+              <p style="font-size:28px;">Use 'git reset' when you want to remove a file from staging - the contents of the file remain unchanged and you do not lose any work.</p>
+              <p style="font-size:28px;">Why would you do this? Developers may stage more than one file at a time and commit the work of both under a single commit message. Perhaps you accidentally staged one more file than you meant to, or you realized it doesn't make sense to group this file under the commit message you were about to make.</p>
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
             <h4>Delete a file</h4>
             <p>Create new file my_other_file.txt</p>
             <pre><code contenteditable class ="command-line">
+
 git add my_other_file.txt
             </code></pre>
             <p>Manually delete your file</p>
