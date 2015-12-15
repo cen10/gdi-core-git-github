@@ -385,11 +385,17 @@ $ git reset my_new_file.txt
             <h4>Delete a file</h4>
             <p>Create new file my_other_file.txt</p>
             <pre><code contenteditable class ="command-line">
+$ touch my_other_file.txt
 $ git add my_other_file.txt
+$ git commit -m "Adding my_other_file"
+# Let's pretend now that we fast-forward in time several weeks and our project has grown. We realize we no longer need "my_other_file" and so we should remove it from our codebase.
             </code></pre>
             <p>Manually delete your file</p>
             <pre><code contenteditable class ="command-line">
 $ git rm my_other_file.txt
+$ git status
+# You'll see that we have deleted 'my_other_file.txt' and that change has been staged by git. Now you need to commit the change.
+$ git commit -m "Removed 'my_other_file from project."
             </code></pre>
           </section>
         </section>
