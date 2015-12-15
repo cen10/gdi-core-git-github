@@ -415,8 +415,9 @@ $ git commit -m "Removed 'my_other_file from project."
             <pre><code contenteditable class ="command-line">
 $ git checkout -b version2
             </code></pre>
-            <p>Add new lines to hello_world.txt</p>
+            <p>Go back to Sublime and enter some new lines to hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
+# Now we need to add and commit these changes.
 $ git add hello_world.txt
 $ git commit -m "Adding changes to version 2"
             </code></pre>
@@ -424,15 +425,16 @@ $ git commit -m "Adding changes to version 2"
           <section>
             <h3>Branching</h3>
             <h4>Switching branches</h4>
-            <p>See all branches. Branch with * is active</p>
+            <p style="font-size:28px;">See all branches. Branch with * is active</p>
             <pre><code contenteditable class ="command-line">
 $ git branch
             </code></pre>
-            <p>Switch to master and look at hello_world.txt</p>
+            <p style="font-size:28px;">Switch to master and look at hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
 $ git checkout master
+# Now that you switched to the master branch, your file in Sublime will automatically reload and show you just what you've created on master.  If you want to see the work from a different branch, check it out and then go back to Sublime.
             </code></pre>
-            <p>Switch to version2 and look at hello_world.txt</p>
+            <p style="font-size:28px;">Switch to version2 and look at hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
 $ git checkout version2
             </code></pre>
