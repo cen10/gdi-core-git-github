@@ -455,15 +455,17 @@ $ git merge version2
           <section>
             <h3>Merging</h3>
             <h4>Merge conflicts</h4>
-            <p>Change first line in hello_world.txt in master branch</p>
+            <p style="font-size:23px;">In Sublime, change the first line in hello_world.txt on your master branch and add/commit your changes. If you're not sure what branch you're on, type "git branch" in terminal and see what branch has an asterisk next to it - that's the branch you are accessing in Sublime.</p>
             <pre><code contenteditable class ="command-line">
 $ git add hello_world.txt
 $ git commit -m "Changing first line in master"
             </code></pre>
-            <p>Change first line in hello_world.txt in version2 branch</p>
+            <p style="font-size:23px;">Next, change the first line in hello_world.txt on your version2 branch.</p>
             <pre><code contenteditable class ="command-line">
 $ git checkout version2
-# open hello_world.txt and change first line
+            </code></pre>
+<p style="font-size:23px;">In Sublime, open hello_world.txt and change the first line, then add/commit changes.</p>
+            <pre><code contenteditable class="command-line">
 $ git add hello_world.txt
 $ git commit -m "Changing first line in version2"
             </code></pre>
@@ -471,12 +473,39 @@ $ git commit -m "Changing first line in version2"
           <section>
             <h3>Merging</h3>
             <h4>Merge conflicts, cont.</h4>
-            <p>Merge from master into version2</p>
+            <p>Merge your code from the master branch into the version2 branch. Remember, we made changes in both files to the first line.</p>
             <pre><code contenteditable class ="command-line">
 $ git merge master
             </code></pre>
-            <p class ="fragment">You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
-
+            <p>You will be notified of a conflict.</p>
+            <img src="images/merge-conflict-warning.png"/>
+          </section>
+          <section>
+            <h3>Merging</h3>
+            <h4>Merge conflicts, cont.</h4>
+            <p style="font-size:28px">Go to your hello_world file in Sublime. You'll see something like this:</p>
+            <img src="images/merge-conflict-sublime.png"/>
+            <p style="font-size:28px">Everything between "<<<<<<< HEAD" and ">>>>>> master" represents a merge conflict that we need to sort out. We're being told that we have made changes on the same line in two different files and we need to choose which one we want. Do we want the text that says "Version2!!!"? Do we want "This is my first text entry. I'm changing line 1 on master."? Or do we want a combination of both? It's up to us.</p>
+          </section>
+          <section>
+            <h3>Merging</h3>
+            <h4>Merge conflicts, cont.</h4>
+            <p style="font-size:20px">I've decided I want only the second line. I'm going to delete everything except the second line from the code.</p>
+            <img style="margin:0px;" src="images/merge-conflict-resolved.png"/>
+            <pre><code contenteditable class="command-line">
+$ git status
+            </code><pre>
+            <img style="margin:0px;" src="images/status-after-conflict.png"/>
+          </section>
+          <section>
+            <h3>Merging</h3>
+            <h4>Merge conflicts, cont.</h4>
+            <p>Now I need to add and commit the changes I just made.</p>
+            <pre><code contenteditable class="command-line">
+$ git add hello_world.txt
+$ git commit -m "Resolve merge conflict."
+            </code></pre>
+            <p>Check git log and you'll see a new commit has been made!</p>
           </section>
         </section>
         <!-- GitHub-->
