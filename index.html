@@ -548,25 +548,43 @@ $ git commit -m "Resolve merge conflict."
           <section>
             <h3>GitHub</h3>
             <h4>Get Local Repository of GitHub Repo</h4>
+            <p style="font-size:28px">Let's pretend we've been working on our personal website, and now that we know the power of Git and GitHub we want to start using both of these tools. We'll need to create a directory on our desktop and a file inside of it to help us with this pretend scenario.</p>
             <pre><code contenteditable class ="command-line">
-cd ../ # Back in root directory
-mkdir hello-github
-cd hello-github
-$ git init
-$ git remote add origin git@github.com:username/NAME-OF-REPO
-$ git pull origin master
+$ cd ~/Desktop
+$ mkdir personal-website
+$ cd personal-website
+$ touch index.html
             </code></pre>
           </section>
           <section>
             <h3>GitHub</h3>
+            <h4>Get Local Repository of GitHub Repo</h4>
+            <p>We know we want to have a copy of our project stored on GitHub, so let's set that up:
+            <ul>
+              <li>Create a free public repo on GitHub with the name "personal-website" and initialize it with a README.</li>
+          </section>
+          <section>
+            <h3>GitHub</h3>
+            <h4>Get Local Repository of GitHub Repo</h4>
+            <p>Now that we have an empty repository waiting on GitHub for all of our files, let's initialize Git in our website directory and connect it to the repo on Github</p>
+            <pre><code contenteditable class="command-line">
+$ pwd # Make sure you are within your website directory
+$ git init
+$ git remote add origin git@github.com:username/NAME-OF-REPO #example: git@github.com:cen10/personal-website
+$ git pull origin master # Pulls down the README file that you initialized this repo with
+          </code></pre>
+          </section>
+          <section>
+            <h3>GitHub</h3>
             <h4>Push to GitHub Repo</h4>
-            <p>Edit the ReadMe file
+            <p>Open your project in Sublime and add some text to the README file.
             <pre><code contenteditable class ="command-line">
+$ git status
 $ git add README
 $ git commit -m "Updating readme file"
 $ git push origin master
             </code></pre>
-            <p class ="fragment">Go look at your github repo online</p>
+            <p class ="fragment">Go look at your GitHub repo online! Your README will have been updated.</p>
           </section>
           <section>
             <h3>GitHub</h3>
